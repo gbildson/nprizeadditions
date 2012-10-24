@@ -1,0 +1,3 @@
+This is a snapshot of all the code that I was using and experimenting for the netflix prize.   I have not cleaned it up so use at your own risk.   Some of this code has been pulled in from various places and I believe I have replicated pieces of the initial nprize code - possibly with minor alterations. 
+
+You should be able to find SVD based algorithms here.  However, I believe that there may be some subtle flaws in how the updates occur given that I've attempted to use these algorithms subsequently and noticed that all of the feature updates (when being computed all at once) were giving the identical results.   Perhaps feature updates need to be done in multiple iterations per feature for better results.  Some of the earlier code works that way.
