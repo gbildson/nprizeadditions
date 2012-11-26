@@ -207,11 +207,11 @@ int doAllFeatures() {
     int i, j, h;
     for (j=0; j<NMOVIES; j++) {
         for (i=0; i<TOTAL_FEATURES; i++) {
-            vishid[j][0][i] = 0.02 * randn() - 0.01; // Normal Distribution
-            vishid[j][1][i] = 0.02 * randn() - 0.01; // Normal Distribution
-            vishid[j][2][i] = 0.02 * randn() - 0.01; // Normal Distribution
-            vishid[j][3][i] = 0.02 * randn() - 0.01; // Normal Distribution
-            vishid[j][4][i] = 0.02 * randn() - 0.01; // Normal Distribution
+            vishid[j][0][i] = 0.02 * randn() - 0.004; // Normal Distribution
+            vishid[j][1][i] = 0.02 * randn() - 0.004; // Normal Distribution
+            vishid[j][2][i] = 0.02 * randn() - 0.004; // Normal Distribution
+            vishid[j][3][i] = 0.02 * randn() - 0.004; // Normal Distribution
+            vishid[j][4][i] = 0.02 * randn() - 0.004; // Normal Distribution
         }
     }
 
@@ -222,7 +222,7 @@ int doAllFeatures() {
     for (j=0; j<NMOVIES; j++) {
         unsigned int mtot = moviercount[j*SOFTMAX+0] + moviercount[j*SOFTMAX+1] + moviercount[j*SOFTMAX+2] + moviercount[j*SOFTMAX+3] + moviercount[j*SOFTMAX+4];
         for (i=0; i<SOFTMAX; i++) {
-            visbiases[j][i] = log( ((double)moviercount[j*SOFTMAX+i]) / ((double) mtot) );
+            visbiases[j][i] = 0.02 * randn() - 0.004; 
         }
     }
 
